@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando elementos de forma dinâmica</title>
+</head>
+<body>
+    
+    <!-- Lista criada de forma dinâmica -->
+    <ul id="lista">
+        <li>Produtos</li>
+
+    </ul>
+
+
+    <!-- Exercício -->
+    <ul id="listaTimes">
+    </ul>
+
+    <script>
+        let elementDiv = document.createElement('div'); // Cria o elemento
+        elementDiv.innerText = 'Incluindo texto na div'; // Inclui texto
+        elementDiv.style.backgroundColor = 'lightgreen'; // Seta background
+
+        document.body.append(elementDiv); // Adiciona o elemento criado no Body
+
+
+        // Criando lista de forma dinâmica
+        let lista = document.getElementById('lista'); // Seleciona UL
+
+        let li = document.createElement('li'); // Cria li
+        li.textContent = "Quem somos"; // Add texto ao item
+
+        lista.appendChild(li); // Adiciona filha li ao UL
+
+
+
+
+        /* ==> EXERCÍCIO <==
+
+        Criar uma lista dinâmica de times de futebol, sendo que cada elemento da lista deve ter uma borda azul.
+        */
+
+        times = ['Real Madrid', 'Barcelona', 'Juventus', 'Atlético']; // Array para guardar o nome dos times
+
+        let listaTimes = document.querySelector('#listaTimes'); // Seleciona UL
+
+        
+        for(let i = 0; i < times.length; i++) {           
+            let time = times[i]; // Pega o time do índice atual
+            let listItem = document.createElement('li'); // Cria elemento li
+            listItem.innerText = time; // Insere o nome do time com base no índice atual
+
+            listItem.style.border = '1px solid #00f'; // Insere a borda
+
+            listaTimes.appendChild(listItem); // Adiciona o item à lista
+
+        }
+
+
+
+    </script>
+</body>
+</html>

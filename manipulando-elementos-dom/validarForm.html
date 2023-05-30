@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validando formulário
+    </title>
+</head>
+
+<body>
+
+    <form action="" name="formCadastro" onsubmit="validarForm()">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" />
+
+        <button type="submit" onclick="novoItem()">Cadastrar</button>
+    </form>
+
+    <script>
+
+        function validarForm() {
+            // Outra forma de pegar elementos do Form
+            let nome = document.forms["formCadastro"]["nome"].value;
+
+            if(nome == "") {
+                alert("Por favor, informar o seu nome!");
+                event.preventDefault(); // Muda comportamento normal do form. Não recarrega a page.  
+            } else {
+                alert("Olá, " + nome);
+                event.preventDefault(); // Muda comportamento normal do form. Não recarrega a page.  
+            }
+        }
+
+    </script>
+</body>
+
+</html>

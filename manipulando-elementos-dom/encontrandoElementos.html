@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando elementos do DOM</title>
+</head>
+
+<body>
+
+    <h1>Usando seletor DOM</h1>
+
+    <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>NodeJS</li>
+    </ul>
+
+    <div class="mensagem" id="conteudo" name="divconteudo"></div>
+
+    <div class="mensagem" name="divconteudo"></div>
+    
+    <div class="mensagem" name="divconteudo"></div>
+    
+    <span class="novo" id="novospan"> Texto no span</span>
+    
+
+    <div class="mensagem"></div>
+
+    <script>
+        // Elements (plural) => geram um array
+
+
+        // Seleção por TAG 
+        elemtento0 = document.getElementsByTagName('li')[0];
+        elemtento0.style.color = '#00f'; // Muda a cor para azul    
+
+        elemtento1 = document.getElementsByTagName('li')[1];
+        elemtento1.style.backgroundColor = '#f00'; // Insere background vermelho
+
+        elemtento2 = document.getElementsByTagName('li')[2];
+        elemtento2.innerText = 'SpringBoot'; // Muda nome para SpringBoot
+
+
+        // Seleção por ID
+        elementoDiv = document.getElementById('conteudo');
+        elementoDiv.innerHTML = '<p>Parágrafo inserido dentro da DIV via JS.</p>';
+
+
+        // Seleção por atributo NAME
+        elementoDivName = document.getElementsByName('divconteudo')[1];
+        elementoDivName.style.color = '#00f';
+        elementoDivName.innerText = 'Texto inserido via JS.';
+
+
+        // Selecionando pela Classe
+        elementoDivClass = document.getElementsByClassName('mensagem')[2];
+        elementoDivClass.innerHTML = '<p>Parágrafo inserido dentro da DIV 2 via JS.</p>';
+
+
+        // Selecionando por Seletor CSS
+        elementoSpanClass = document.querySelector('.novo'); // Pega o elemento com a class 'novo'
+        elementoSpanClass.style.color = 'yellow';
+
+        elementoSeletor = document.querySelectorAll('.mensagem')[3]; // Pega TODOS os elementos que tenham essa class
+
+        elementoSeletor.innerHTML = '<p>Texto incluído</p>';
+
+    </script>
+</body>
+
+</html>

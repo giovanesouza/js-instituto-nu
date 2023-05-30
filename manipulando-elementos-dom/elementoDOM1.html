@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento do DOM exemplo 1</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        /*
+        window (Primeiro elemento da árvore do DOM) => Janela do browser
+        
+        window.alert(); // Janela com texto e botão de OK
+        window.confirm(); // Janela com texto e dois botões: OK e Cancel
+        window.prompt(); // Janela que permite digitar algo (entrada de dado) com botão de Ok que grava a informação digitada
+        */
+
+
+        // window.alert("Nosso primeiro alert");
+        //    window.confirm("Você deseja excluir este item?");
+        // window.prompt("Qual é o seu nome?");
+
+
+        /*
+        ==> EXERCÍCIO <==
+
+        QUESTÃO 1
+        - Crie um prompt informando "Digite seu nome:"
+        - Guarde o nome digitado em uma variável só que em caixa alta.
+        - Crie outro prompt informando "Digite seu sobrenome:"
+        - Guarde o sobrenome digitado em uma variável só que em caixa alta. Depois apresente o nome e sobrenome digitado em uma janela de alerta.
+        */
+
+        //let nome = window.prompt("Digite seu nome: "); // Pega o nome e guarda na variável       
+        //let sobrenome = window.prompt("Digite seu sobrenome: "); // Pega o sobrenome e guarda na variável
+
+
+        // window.alert("Seu nome é: " + nome.toUpperCase() + " " + sobrenome.toUpperCase());
+
+
+        /*
+         QUESTÃO 2
+        - Peça para o usuário digitar um número
+        - Guarde esse número em uma variável
+        - Peça para o usuário digitar um outro número
+        - Guarde esse número em outra variável.
+        - Faça a soma dos números e apresente em uma janela de alerta.
+        
+        */
+
+        // Tudo que é digitado no prompt é entendido como STRING, portanto é necessário colocar o tipo Number para converter o valor em número (parseInt() => indica que é um inteiro)
+        // let n1 = Number.parseInt(window.prompt("Digite um número: "));
+        // let n2 = Number.parseInt(window.prompt("Digite outro número: "));
+        // let soma = n1 + n2;
+
+        // window.alert("A soma dos números informado é: " + soma);
+
+
+    </script>
+</body>
+
+</html>
